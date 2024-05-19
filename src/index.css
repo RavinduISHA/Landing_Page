@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  section{
+    @apply py-[74px]
+  }
+}
+
+@layer components{
+  .container{
+    @apply max-w-full w-[1440px] px-5 mx-auto 
+  }
+
+  .header{
+    @apply bg-[#F5F6F7] bg-no-repeat bg-center bg-cover w-full leading-[100px]
+  }
+}
+
+@media only screen and (max-width:1024px){
+  .container{
+    @apply w-full
+  }
+
+  section{
+    @apply py-[35px]
+  }
+}
