@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#131317",
+        primary: "#F5F6F7",
         secondry: "#646C71",
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },
