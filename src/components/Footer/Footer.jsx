@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/LogoF.png";
+import Logo from "../../assets/Logo.png";
 
 const productlinks = [
   {

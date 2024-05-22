@@ -15,7 +15,7 @@ function Header() {
 
           {/* Right Nav */}
           <div className="flex items-center gap-8">
-            <button className="bg-[#EEEEEE] py-2 px-6 font-[600] h-[44px] flex items-center justify-center rounded-[30px]">
+            <button className="bg-[#EEEEEE] py-2 px-6 font-[600] h-[44px] flex items-center justify-center rounded-[30px] transition duration-300 hover:bg-[#2377FC] hover:text-white">
               Sign in
             </button>
 
