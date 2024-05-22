@@ -341,7 +341,10 @@ function Home() {
 
             <div className="bg-primary flex md:flex-row flex-col rounded-lg md:mt-24 mt-12">
               {/* left content */}
-              <div className="md:w-[50%] md:mx-24 md:py-24 flex flex-col md:gap-16 md:p-0 p-4">
+              <div
+                className="md:w-[50%] md:mx-24 md:py-24 flex flex-col md:gap-16 md:p-0 p-4"
+                data-aos="fade-left"
+              >
                 {/* text */}
                 <div className="text-center md:text-start">
                   <h1 className="text-[30px] text-black font-[600] md:text-[40px] md:leading-[50px] leading-[40px] md:w-[300px]">
@@ -415,7 +418,10 @@ function Home() {
         <div className="container poppins-regular">
           <div className="bg-primary flex md:flex-row flex-col rounded-lg">
             {/* left content */}
-            <div className="md:w-[50%] md:mx-24 md:py-24 flex flex-col md:gap-16 md:p-0 p-4">
+            <div
+              className="md:w-[50%] md:mx-24 md:py-24 flex flex-col md:gap-16 md:p-0 p-4"
+              data-aos="fade-right"
+            >
               {/* text */}
               <div className="text-center md:text-start">
                 <h1 className="text-[30px] text-black font-[600] md:text-[40px] md:leading-[50px] leading-[40px] md:w-[350px]">
@@ -692,9 +698,12 @@ function Home() {
               className="md:top-10 md:right-10 top-5 right-5 md:w-32 md:h-32 w-16 h-16"
             />
           </div>
-          <div className="relative md:h-[100%] flex flex-col items-center justify-center overflow-hidden">
+          <div
+            className="relative md:h-[100%] flex flex-col items-center justify-center overflow-hidden"
+            data-aos="zoom-in"
+          >
             {/* middle text */}
-            <div className="text-center md:space-y-6 space-y-2 md:mt-0 mt-[40px] md:mt-[100px]">
+            <div className="text-center md:space-y-6 space-y-2 mt-[40px] md:mt-[100px]">
               <h1 className="md:text-[50px] text-[30px] md:leading-[40px] leading-[30px] font-bold text-gray-900">
                 Ready to use Paradox?
               </h1>
