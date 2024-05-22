@@ -1,4 +1,3 @@
-// src/components/TabView.js
 import { useState } from "react";
 
 // components

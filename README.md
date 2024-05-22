@@ -4,19 +4,19 @@ Tech Stack - HTML, CSS, JS
 Frameworks - ReactJs, TailwindCSS
 
 Assumptions:
-    - second section left side It's an Image
-    - forth section there's a toggle menu
+    - The second section is on the left side as it is a Image
+    - The Forth section panel has a toggle menu
 
 Improvements:
     - Scroll down option
     - Forth section Relalistic materials and Live interaction contents with toggle
 
-Minimize page loading speed:
+methods or suggestions minimize page loading speed:
     - compress images without loosing quality
     - resubale components used
-    - Lazy loading images
+    - Load images and other media only when they are about to enter the viewport
     - Remove unnessary comments, characters, and white spaces
-    - 
+    - Merge CSS and JavaScript files to reduce the number of requests.
 
 How to test the project:
     - clone the repository

@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Icons
 import { SiFramer } from "react-icons/si";
@@ -45,6 +48,13 @@ function Home() {
     window.scrollBy({ top: 700, left: 0, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -53,7 +63,10 @@ function Home() {
           <div className="flex flex-col">
             <div className="flex flex-col md:flex-row items-center justify-between w-full">
               {/* Content */}
-              <div className="md:w-1/2 lg:w-2/3 text-center md:text-start md:pr-4 lg:pr-8">
+              <div
+                className="md:w-1/2 lg:w-2/3 text-center md:text-start md:pr-4 lg:pr-8"
+                data-aos="fade-up"
+              >
                 <h1 className="text-[60px] md:text-[70px] lg:text-[85px] text-black font-[600] leading-[50px] md:leading-[50px]">
                   Paradox
                 </h1>
@@ -61,9 +74,9 @@ function Home() {
                   The Real-time & powerful 3D designs for web
                 </p>
 
-                {/* buttons */}
+                {/* Buttons */}
                 <div className="flex flex-row gap-2 md:gap-4 mt-8 md:mt-6 md:justify-start justify-center md:w-3/4">
-                  <button className="bg-[#2377FC] py-[12px] md:py-[15px] px-[25px] lg:w-full rounded-[50px] text-white font-[600] hover:bg-[#EEEEEE] transition duration-300 hover:text-black">
+                  <button className="bg-[#2377FC] py-[12px] md:py-[15px] px-[25px] lg:w-full rounded-[50px] text-white font-[600] hover:bg-[#1A5CB7] transition duration-300 hover:text-white">
                     <Link to="/">Launch app</Link>
                   </button>
                   <button className="bg-[#EEEEEE] py-[12px] md:py-[15px] px-[25px] lg:w-full rounded-[50px] text-black font-[600] hover:text-[#2377FC] transition duration-300">
@@ -72,8 +85,11 @@ function Home() {
                 </div>
               </div>
 
-              {/* Img */}
-              <div className="md:w-1/2 lg:w-2/3 w-full mt-20 md:mt-0 flex md:justify-end justify-center">
+              {/* Image */}
+              <div
+                className="md:w-1/2 lg:w-2/3 w-full mt-20 md:mt-0 flex md:justify-end justify-center"
+                data-aos="zoom-in"
+              >
                 <img
                   src={HeroImage}
                   alt="Hero Image"
@@ -82,15 +98,18 @@ function Home() {
               </div>
             </div>
 
-            {/* DownArrow */}
+            {/* Down Arrow */}
             <div
               className="flex flex-row gap-4 items-center mt-8 md:mt-0 cursor-pointer"
               onClick={handleScrollDown}
+              data-aos="fade-down"
+              aria-label="Scroll Down"
+              role="button"
             >
-              <div className="p-2 rounded-full bg-[#EEEEEE] w-[30px]">
+              <div className="p-2 rounded-full bg-[#EEEEEE] w-[30px] hover:bg-[#CCCCCC] transition duration-300">
                 <GoArrowDown />
               </div>
-              <span className="text-secondary">Scroll Down</span>
+              <span className="text-secondry">Scroll Down</span>
             </div>
           </div>
         </div>
@@ -578,66 +597,66 @@ function Home() {
             Delightfully simple & powerful 3D design tool
           </h1>
         </div>
-        <div className="container poppins-regular absolute md:mb-32">
-          <div className="flex items-center justify-center md:mt-8 mt-12">
-            <div className="relative w-full max-w-4xl bg-[#26282B] rounded-xl shadow-lg">
-              <div className="relative">
-                <div className="w-full md:h-12 h-8 bg-[#191B1E] rounded-tr-xl rounded-tl-xl">
-                  <div className="absolute top-2 right-2">
-                    <div className="rounded-full bg-blue-500 md:w-8 w-5 md:h-8 h-5 flex justify-center items-center">
-                      <div className="rounded-full bg-white md:w-4 md:h-4 w-2.5 h-2.5"></div>
-                    </div>
+
+        <div className="flex items-center justify-center md:mt-8 mt-12 container poppins-regular md:mb-32">
+          <div className="absolute md:w-full w-[90%] max-w-4xl bg-[#26282B] rounded-xl shadow-lg md:mt-[600px] mt-[300px]">
+            <div className="relative">
+              <div className="w-full md:h-12 h-8 bg-[#191B1E] rounded-tr-xl rounded-tl-xl">
+                <div className="absolute top-2 right-2">
+                  <div className="rounded-full bg-blue-500 md:w-8 w-5 md:h-8 h-5 flex justify-center items-center">
+                    <div className="rounded-full bg-white md:w-4 md:h-4 w-2.5 h-2.5"></div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="">
-                <div className="md:w-44 w-24 md:h-[91.5%] h-[85%] bg-[#313336] absolute rounded-bl-xl"></div>
-              </div>
+            <div className="">
+              <div className="md:w-44 w-24 md:h-[91.5%] h-[85%] bg-[#313336] absolute rounded-bl-xl"></div>
+            </div>
 
-              {/* middle image */}
-              <div className="flex justify-center">
-                <img
-                  src={middleImg}
-                  alt="Middle Image"
-                  className="w-[100%] h-auto"
-                />
-              </div>
-              {/* ball images */}
-              <div className="absolute md:top-20 md:-translate-x-1/2 -translate-x-5 top-10">
-                <img
-                  src={Ball1}
-                  alt="black-ball"
-                  className="rounded-full md:w-full w-[50%] mix-blend-color-dodge animate-spin duration-95"
-                />
-              </div>
+            {/* middle image */}
+            <div className="flex justify-center itm">
+              <img
+                src={middleImg}
+                alt="Middle Image"
+                className="w-[100%] h-auto"
+              />
+            </div>
+            {/* ball images */}
+            <div className="absolute md:top-20 md:-translate-x-1/2 -translate-x-5 top-10">
+              <img
+                src={Ball1}
+                alt="black-ball"
+                className="rounded-full md:w-full w-[50%] mix-blend-color-dodge animate-spin duration-95"
+              />
+            </div>
 
-              <div className="absolute md:top-[350px] md:right-0 right-0  md:translate-x-1/2 translate-x-4 top-[180px]">
-                <img
-                  src={Ball2}
-                  alt="green-ball"
-                  className="rounded-full md:w-full w-[50%] mix-blend-color-dodge animate-spin duration-95"
-                />
-              </div>
+            <div className="absolute md:top-[350px] md:right-0 right-0  md:translate-x-1/2 translate-x-4 top-[180px]">
+              <img
+                src={Ball2}
+                alt="green-ball"
+                className="rounded-full md:w-full w-[50%] mix-blend-color-dodge animate-spin duration-95"
+              />
+            </div>
 
-              <div className="absolute md:top-[275px] top-[120px] left-8">
-                <img
-                  src={Ball3}
-                  alt="yellow-ball"
-                  className="rounded-full w-10 md:w-12 mix-blend-normal animate-pulse duration-100"
-                />
-              </div>
+            <div className="absolute md:top-[275px] top-[120px] left-8">
+              <img
+                src={Ball3}
+                alt="yellow-ball"
+                className="rounded-full w-10 md:w-12 mix-blend-normal animate-pulse duration-100"
+              />
+            </div>
 
-              <div className="absolute md:top-[145px] top-[50px] md:-right-16 -right-4">
-                <img
-                  src={Ball4}
-                  alt="blue-ball"
-                  className="rounded-full w-10 mix-blend-normal animate-pulse duration-100"
-                />
-              </div>
+            <div className="absolute md:top-[145px] top-[50px] md:-right-16 -right-4">
+              <img
+                src={Ball4}
+                alt="blue-ball"
+                className="rounded-full w-10 mix-blend-normal animate-pulse duration-100"
+              />
             </div>
           </div>
         </div>
+
         {/* double color bg */}
         <div className="w-full md:h-[50%] h-[200px] flex md:flex-row flex-row md:mt-[450px] mt-[150px]">
           <div className="bg-gradient-to-r from-blue-300 to-blue-200 md:w-2/3 w-full md:p-[200px] p-[100px]"></div>
